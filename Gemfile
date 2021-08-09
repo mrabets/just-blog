@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'bootstrap-sass',      '~> 3.4.1'
+
+gem 'jquery-rails'
+
+gem 'bootstrap', '~> 5.0.1'
+
 group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
 end
