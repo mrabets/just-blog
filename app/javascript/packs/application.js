@@ -8,9 +8,19 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
-//= require jquery3
-//= require popper
-//= require bootstrap-sprockets
+
+import 'bootstrap';
+import '../stylesheets/application'
+
+document.addEventListener("turbolinks:load", () => {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover()
+  })
+
+require("@rails/ujs").start()
+require("turbolinks").start()
+require("@rails/activestorage").start()
+require("channels")
 
 Rails.start()
 Turbolinks.start()
