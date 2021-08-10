@@ -1,4 +1,20 @@
-<h1><%= @post.title %></h1>
-<p><%= @post.content %></p>
-<td><%= link_to 'Edit', edit_post_path(@post) %></td>
-<td><%= button_to 'Delete', post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %></td>
+<div class="container">
+  <h1><%= @post.title %></h1>
+  <span class="label label-primary"> Last update <%= @post.updated_at.strftime("%b %d, %Y") %></span>
+</div>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <p>
+        <%= @post.content %>
+      </p>
+    </div>
+    <div class="panel-footer">By @mrabets</div>
+  </div>
+  <%= button_to 'Edit', edit_post_path(@post), method: :get, class: "btn btn-primary btn-sm" %><br>
+  <%= button_to 'Delete', post_path(@post), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-primary btn-sm" %>
+  <hr><%= link_to 'Back', posts_path, class: 'label label-primary' %>
+</div>
+
+
+
