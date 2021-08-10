@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'cancancan'
+gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
+gem 'devise'
+
 gem 'simple_form', '~> 5.1'
 
 gem 'bootstrap-sass',      '~> 3.4.1'

@@ -8,6 +8,9 @@ import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
+global.toastr = require("toastr")
+import "../stylesheets/application"
+
 // jquery
 import $ from 'jquery';
 
