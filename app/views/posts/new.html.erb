@@ -1,12 +1,7 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>Add new post</h1>
 
-<%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-
-  <%= f.label :content %>
-  <%= f.text_area :content %>
-
-  <%= f.submit 'Create my post' %>
+<%= simple_form_for @post do |f| %>
+  <%= f.input :title %>
+  <%= f.input :content, input_html: {rows: 7} %>
+  <%= f.button :submit, "Create my post", class: "btn btn-primary" %>
 <% end %>
