@@ -19,6 +19,7 @@ global.jQuery = $
 
 
 require('jquery-ui');
+require("particles.js")
 
 // jquery-ui theme
 require.context('file-loader?name=[path][name].[ext]&context=node_modules/jquery-ui-dist!jquery-ui-dist', true,    /jquery-ui\.css/ );
@@ -41,8 +42,8 @@ require("channels")
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require particles.min
 //= require_tree .
-
 
 Rails.start()
 Turbolinks.start()

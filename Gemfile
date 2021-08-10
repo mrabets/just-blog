@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+
+gem 'particles-js-rails', '2.0.0'
 gem 'cancancan'
 gem 'rails_admin', git: 'https://github.com/sferik/rails_admin.git'
 gem 'devise'
