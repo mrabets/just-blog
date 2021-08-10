@@ -3,5 +3,6 @@
 <hr>
 <%= @posts.each do |p| %>
   <h3><%= p.title %></h3>
-  <p><%= p.content %></p><hr>
+  <p><%= p.content %></p>
+  <%= link_to 'Show', p %><hr>
 <% end %>
