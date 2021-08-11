@@ -15,6 +15,7 @@ class PostsController < ApplicationController
     @post = current_user.posts.new post_params
 
     if @post.save
+      flash[:success] = 'Your post has successfully added'
       redirect_to @post
     else
       render 'new'
